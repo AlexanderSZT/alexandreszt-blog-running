@@ -37,7 +37,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const post = await sanityFetch<PostQueryResult>({
     query: postQuery,
@@ -99,7 +99,7 @@ export default async function PostPage({ params }: Props) {
           </div>
           <div className="mb-6 text-lg">
             <div className="mb-4 text-lg">
-              <DateComponent dateString={post.date} />
+              Publié le <DateComponent dateString={post.date} />
             </div>
           </div>
         </div>
